@@ -4,7 +4,7 @@
 @Author: Mar Ping
 @Date: 2019-12-18 18:09:10
 @LastEditors: Mar Ping
-@LastEditTime: 2020-04-23 20:55:52
+@LastEditTime: 2020-04-23 21:11:25
 '''
 # 1.导入所需模块
 import requests
@@ -29,7 +29,7 @@ def path_make(path):
 main_dir = os.getcwd()
 
 path_make(main_dir)
-print('\n图片保存路径 --> ', main_dir , end='\n')
+print('\n图片保存路径 --> ', main_dir + r'\Glory of Kings', end='\n')
 
 # 2.读取json文件
 url = 'http://pvp.qq.com/web201605/js/herolist.json'
@@ -74,6 +74,5 @@ try:
 except KeyError as e:
     # 捕获异常：解决皮肤名称全部打印完成后会报错的问题
     print('........................程序执行完毕!........................')
-    print('\n图片保存路径 --> ', main_dir, end='\n')
-
+    print('\n图片保存路径 --> ', main_dir + r'\Glory of Kings', end='\n')
 input("按回车结束运行................")
