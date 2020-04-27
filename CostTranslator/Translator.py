@@ -4,7 +4,7 @@
 @Author: Mar Ping
 @Date: 2020-04-23 16:03:34
 @LastEditors: Mar Ping
-@LastEditTime: 2020-04-23 23:17:24
+@LastEditTime: 2020-04-27 14:33:07
 '''
 #百度通用翻译API,不包含词典、tts语音合成等资源，如有相关需求请联系translate_api@baidu.com
 # coding=utf-8
@@ -14,7 +14,7 @@ import hashlib
 import urllib
 import random
 import json
-import OCR_PPT
+import OCR_PIC
 
 '''
 APP ID：20200423000427835
@@ -29,7 +29,7 @@ myurl = '/api/trans/vip/translate'
 fromLang = 'auto'   #原文语种
 toLang = 'zh'   #译文语种
 salt = random.randint(32768, 65536)
-ocr = OCR_PPT.ocr()
+ocr = OCR_PIC.ocr()
 q = ocr[0]
 
 sign = appid + q + str(salt) + secretKey

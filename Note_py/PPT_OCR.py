@@ -4,10 +4,11 @@
 @Author: Mar Ping
 @Date: 2020-04-21 18:01:30
 @LastEditors: Mar Ping
-@LastEditTime: 2020-04-21 18:28:15
+@LastEditTime: 2020-04-23 22:14:01
 '''
 from aip import AipOcr
 import os
+import DownloadPPT
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 APP_ID = '19534018'
 API_KEY = 'dgHolPV3cciGmfZusoys5kyg'
