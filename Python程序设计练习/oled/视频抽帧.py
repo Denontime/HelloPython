@@ -4,7 +4,7 @@
 @Author: Mar Ping
 @Date: 2019-12-04 00:01:57
 @LastEditors: Mar Ping
-@LastEditTime: 2020-05-11 15:02:34
+@LastEditTime: 2020-05-11 15:54:27
 '''
 # File: pizza.py
 # Program calculation the price(价格) per square inch(每平方英寸) of pizza
@@ -16,6 +16,18 @@ import cv2
 import os
 import numpy
 import shutil
+
+print('——————————————————————————————————视频抽帧工具——————————————————————————————————',end='\n')
+print('本工具由B站 Dwnon喵帕斯 制作，欢迎关注！')
+print('由于up时间原因暂时没有界面.......后续有时间肯定会做')
+print('需要处理的视频必须和本工具在同一目录下，处理后的图片会以视频名命名的文件夹保存')
+print('在使用之前你需要准备:   1、该视频的全名（加上扩展名）')
+print('                     2、视频的帧速率（视频属性里面有）')
+print('                     3、需要裁剪请自行得知裁剪区域左上角和右下角的坐标（视频左上角为0，0点）')
+print('                     4、需要缩放请自行计算缩放比例，只支持缩小：预期大小的一条边/原视频对应边=比例')
+print('                     5、需要二值化可先尝试自动二值化，根据输出的 mean 值可以进行手动二值化，mean值即为自动二值化时的参数')
+
+input("请确认你已准备好需要的信息，按下回车继续...............")
 
 #视频文件名字
 filename = input("请输入视频文件名（带扩展名！！！）：")
@@ -36,7 +48,7 @@ if not isExists:
 else:
 
     shutil.rmtree(savedpath)
-
+    
     os.makedirs(savedpath)
 
     print('path of %s already exist and rebuild'%(savedpath))
