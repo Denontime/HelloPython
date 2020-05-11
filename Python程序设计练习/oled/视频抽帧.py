@@ -4,7 +4,7 @@
 @Author: Mar Ping
 @Date: 2019-12-04 00:01:57
 @LastEditors: Mar Ping
-@LastEditTime: 2020-05-11 14:38:10
+@LastEditTime: 2020-05-11 15:02:34
 '''
 # File: pizza.py
 # Program calculation the price(价格) per square inch(每平方英寸) of pizza
@@ -18,12 +18,12 @@ import numpy
 import shutil
 
 #视频文件名字
-filename = input("请输入视频文件名（带扩展名）：")
+filename = input("请输入视频文件名（带扩展名！！！）：")
 
 
 #保存图片的路径
 
-savedpath = os.getcwd()
+savedpath = filename.split('.')[0] + '/'
 
 isExists = os.path.exists(savedpath)
 
@@ -60,17 +60,17 @@ if(size_state == 'y'):
     cut_y1 =input("请输入左上角y坐标：")
     cut_x2 =input("请输入右下角x坐标：")
     cut_y2 =input("请输入右下角y坐标：")
+    cut_x1 = int(cut_x1)
+    cut_y1 = int(cut_y1)
+    cut_x2 = int(cut_x2)
+    cut_y2 = int(cut_y2)
 
 
 font_state = input("是否需要缩放？[y/n]")
 if(font_state == 'y'):
-    x = input("请输入原视频宽：")
-    y = input("请输入原视频高：")
-    tx = input("请输入导出图片宽：")
-    ty = input("请输入导出图片高：")
+    px = input("请输入缩放比例（0-1）：")
+    px = float(px)
 
-    px = float(tx) / float(x)
-    py = float(ty) / float(y)
 
 colorstate = input("是否需要二值化？[y/n]")
 
@@ -102,7 +102,7 @@ while True:
             cropped = resized[cut_y1:cut_y2, cut_x1:cut_x2]
         #缩放图片
         if(font_state == 'y'):
-            resized = cv2.resize(cropped, None, fx=px, fy=py, interpolation=cv2.INTER_AREA)
+            resized = cv2.resize(cropped, None, fx=px, fy=px, interpolation=cv2.INTER_AREA)
         #二值化图片
         if(colorstate == 'y'):
 
