@@ -1,0 +1,43 @@
+来自客户端('127.0.0.1', 9011),发送的
+b'\xaaU\x00 \x02\x01\x01\x00!x\x0b\x0e\x1a\x01?\x10h\x10h\x10h\x05\x00\x00\x10\x00\x00\x10 \x00\x00\x00\x100\x10\x00\xba\x12'
+aa 55 00 20 02 01 01 00 21 78 0b 0e 1a 01 3f 10 68 10 68 10 68 05 00 00 10 00 00 10 20 00 00 00 10 30 10 00 ba 12
+0:4     (head)          AA 55   
+4:8     (length)        00 20    
+8:10    (function)      02  
+10:14   (DeviceType)    01 01
+14:18   (DeviceID)      00 21
+18:20   (Voltage)       78
+20:22   (UP_Current)    0B
+22:24   (Mid_Current)   0E
+24:26   (Down_Current)  1A
+26:28   (IN_Status)     01
+28:30   (Motor_Status)  3F
+30:34   (UP_Speed)      10 68
+34:38   (Mid_Speed)     10 68
+38:42   (Down_Speed)    10 68
+42:44   (PE_Status)     05
+44:70   (Fault)         00 00 10 00 00 10 20 00 00 00 10 30 10
+70:72   (Reserve)       00
+72:76   (CRC)           BA 12
+
+{"key":"19","time":"1616298453.5058572","ip":"127.0.0.1","data":"{aa5500200201010021780b0e1a013f106810681068050000100000102000000010301000ba12}","Values":{}}
+
+
+length        = data[4:8]
+function      = data[8:10]
+Type          = data[10:12]
+version       = data[12:14]
+ID            = data[14:18]
+Voltage       = data[18:20]
+UP_Current    = data[20:22]
+Mid_Current   = data[22:24]
+Down_Current  = data[24:26]
+IN_Status     = data[26:28]
+Motor_Status  = data[28:30]
+UP_Speed      = data[30:34]
+Mid_Speed     = data[34:38]
+Down_Speed    = data[38:42]
+PE_Status     = data[42:44]
+Fault         = data[44:70]
+Reserve       = data[70:72]
+CRC           = data[72:76]
