@@ -1,0 +1,15 @@
+{
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
+    "cSpell.words": [
+        "APPID",
+        "DNOOCWWK",
+        "DSHOW",
+        "Descripttion",
+        "Fcsap",
+        "cbms",
+        "imshow",
+        "imwrite"
+    ],
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true
+}
