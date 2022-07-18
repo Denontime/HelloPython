@@ -1,0 +1,1 @@
+Log.insert("insert", 'Capture Photo!\n')
